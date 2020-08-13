@@ -1,13 +1,45 @@
 *, *:before, *:after {
-    box-sizing: border-box;
+    box-sizing: border-box ;
 }
 
-html {
+html{
     font-size: 16px;
 }
-
 body {
     font-size: 1rem;
     margin: 0;
     padding: 0;
+}
+.image-list {
+display: flex;
+flex-wrap: wrap;
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+.image-list li {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    flex-basis: 274px;
+    position: relative;
+    max-width: 640px;
+    width: 100%;
+}
+.image-list li > img {
+    width: 100%;
+    height: auto;
+}
+@media screen and (min-width:640px) {
+    .image-list li {
+        flex-basis: 50%;
+        max-width: 100%;
+
+    }
+}
+@media screen and (min-width: 960px){
+    .image-list li{
+        flex-basis: 33.333%;
+    }
 }
